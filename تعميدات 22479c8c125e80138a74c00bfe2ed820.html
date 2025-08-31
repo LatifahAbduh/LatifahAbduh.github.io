@@ -1,0 +1,689 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>تعميدات</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray {
+	color: rgba(115, 114, 110, 1);
+	fill: rgba(115, 114, 110, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(205, 60, 58, 1);
+	fill: rgba(205, 60, 58, 1);
+}
+.highlight-default_background {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.highlight-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(115, 114, 110, 1);
+	fill: rgba(115, 114, 110, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(205, 60, 58, 1);
+	fill: rgba(205, 60, 58, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.block-color-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(142, 58, 1, 0.141); }
+.select-value-color-orange { background-color: rgba(213, 96, 0, 0.188); }
+.select-value-color-yellow { background-color: rgba(209, 155, 0, 0.238); }
+.select-value-color-green { background-color: rgba(1, 104, 42, 0.145); }
+.select-value-color-blue { background-color: rgba(45, 149, 218, 0.236); }
+.select-value-color-purple { background-color: rgba(104, 1, 184, 0.125); }
+.select-value-color-pink { background-color: rgba(204, 1, 88, 0.137); }
+.select-value-color-red { background-color: rgba(228, 26, 0, 0.148); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="22479c8c-125e-8013-8a74-c00bfe2ed820" class="page sans"><header><h1 class="page-title">تعميدات</h1><p class="page-description"></p></header><div class="page-body"><ul id="26079c8c-125e-80c8-801e-c9f975f86ec2" class="bulleted-list"><li style="list-style-type:disc">-- صفحة 1 ---</li></ul><p id="26079c8c-125e-80e4-aa80-eb26625e6a6c" class="">الملكة العَربيَّةُ السَّعوديّةْ</p><p id="26079c8c-125e-8018-aa81-c8bd1fe6df81" class="">04/3101239</p><p id="26079c8c-125e-809e-8141-ecfa207179ea" class="">ضيوف الرحمن</p><p id="26079c8c-125e-80fe-b8f8-e731a744369f" class="">النقابة العامة للسيارات</p><p id="26079c8c-125e-80f8-9e89-de004ab62ef8" class="">بنقابة العامة للسيارات</p><p id="26079c8c-125e-80ac-9dcf-ff8c5a2a916a" class="">التاريخ:</p><p id="26079c8c-125e-80b6-8b86-f47d67842629" class="">1445/06/29</p><p id="26079c8c-125e-804b-9369-eb8400464314" class="">ـدوع:</p><p id="26079c8c-125e-80fa-baff-fc57079624b3" class="">شرق .. أمانة .. مسؤولية ـ</p><p id="26079c8c-125e-8049-a6e9-ec1a970bc03d" class="">صادر عادي</p><p id="26079c8c-125e-807b-82aa-d6fc0b6b83ab" class="">المشفوعات: 1</p><p id="26079c8c-125e-8023-bc6f-c80fef6aa4eb" class="">السادة / شركة خدمات الجيل التالي لتقنية المعلومات</p><p id="26079c8c-125e-8078-8101-c68b8543fa63" class="">المحترمين</p><p id="26079c8c-125e-80cf-a553-f4f81fd4c23b" class="">السلام عليكم ورحمة الله وبركاته</p><p id="26079c8c-125e-80aa-8304-d861574f7d70" class="">إشارة الى عرض السعر رقم (508-Q23) وتاريخ (٢٠٢٣/١٢/١٨ م) المقدم منكم عبر</p><p id="26079c8c-125e-808a-8e95-e78f65ae033a" class="">منصة فرصة بموقع تسعة أعشار بخصوص توفير كادر فني للعمل عن بعد بمركز تقنية</p><p id="26079c8c-125e-8002-ab49-c72eca0df872" class="">المعلومات في النقابة العامة للسيارات بمبلغ اجمالي [٢٣٤٫٦٠٠/٠٠] مائتان وأربعة وثلاثون</p><p id="26079c8c-125e-8059-a7b4-e5a90c5c5aeb" class="">ألف وستمائة ريال سعودي فقط لا غير، تشمل جميع التكاليف اللازمة للتنفيذ وتشمل كذلك</p><p id="26079c8c-125e-8076-9f35-ca82d6734ef7" class="">ضريبة القيمة المضافة.</p><p id="26079c8c-125e-80c3-8655-ec2ed4be6222" class="">وحيث أن عطاؤكم هو العطاء المطابق للشروط والمواصفات المطلوبة، ولموافقتنا عليه،</p><p id="26079c8c-125e-806b-bc0a-dd2392eafed7" class="">فإننا نعمدكم بتنفيذ المطلوب بعد استلام التعميد حسب الشروط والمواصفات المطلوبة</p><p id="26079c8c-125e-8020-b4c3-d56aad5de1c4" class="">والموضحة في كراسة الشروط والمواصفات والعرض المقدم من قبلكم، مع استكمال المستندات</p><p id="26079c8c-125e-80a8-9db2-c2f7f1137633" class="">الرسمية الخاصة بالشركة سارية المفعول، وتكليف مندوب الشركة لتوقيع العقد مدعومًا</p><p id="26079c8c-125e-802e-9996-f4f4d8321f45" class="">بخطاب تفويض مصادق عليه من الغرفة التجارية.</p><p id="26079c8c-125e-80cd-aa77-ce3e631fa60d" class="">وتقبلوا خالص تحياتي.</p><p id="26079c8c-125e-80cb-a2ce-c8ce2184d8aa" class="">رئيس عام النقابة العامة للسيارات المكلف</p><p id="26079c8c-125e-8003-8436-c38d5a73400d" class="">إدارة الشؤون المالية، قسم العقود والمشتريات</p><p id="26079c8c-125e-80c6-b26e-e252e014733f" class="">الإتصالات</p><p id="26079c8c-125e-80e6-bad0-e7c5052480f6" class="">ص/ تسعادة مدير مكتب الرئيس العام</p><p id="26079c8c-125e-8097-b99f-d7a13e0c6f7c" class="">المركز الرئيسي</p><p id="26079c8c-125e-80ab-906b-f2640f422e2d" class="">ص / تسعادة مساعد الرئيس للشؤون المالية</p><p id="26079c8c-125e-8061-86ce-d026bc19d050" class="">ص/ لسعادة مدير إدارة تقنية المعلومات</p><p id="26079c8c-125e-802e-a36f-efcece01b391" class="">الإداريـ</p><p id="26079c8c-125e-8021-811a-e96417630c06" class="">ص/ تسعادة مساعد إداري/ تقنية المعلومات</p><p id="26079c8c-125e-804b-964d-d1b812920384" class="">أسامة عبد الوهاب سمكري</p><p id="26079c8c-125e-8053-9a51-c70562d207cf" class="">ص/ لسعادة رئيس وحدة العقود والمشتريات</p><p id="26079c8c-125e-8059-a712-e3ddc8481c49" class="">ص / لسعادة رئيس الحسابات والميزانية</p><p id="26079c8c-125e-80e9-953b-d05d0a87f2bc" class="">ص/ تسعادة رئيس حسابات الشركات</p><p id="26079c8c-125e-8087-8680-ca1b28c02061" class="">ص/ لسعادة رئيس قسم الرقابة المالية</p><p id="26079c8c-125e-8084-aab6-dc6488f5e6ca" class="">ص / لسعادة اخصائي أول المشتريات والعقود</p><p id="26079c8c-125e-80bd-80e2-d22c4156771c" class="">ص / لسعادة مساعد اخصائي العقود والمشتريات ٢</p><p id="26079c8c-125e-8015-806a-e283085b5e69" class="">س / لصادر الإدارة المالية</p><p id="26079c8c-125e-80f3-be09-d1b0b54fc763" class="">م/الاتصالات الإدارية قيد رقم (جديد) %٣٧٥.</p><p id="26079c8c-125e-8026-8597-e8cd36741faa" class="">الإجراءات المالية:</p><p id="26079c8c-125e-801b-a44d-c123c97f6000" class="">بند الحاسب الالى</p><p id="26079c8c-125e-802a-be7f-d2f5a832b615" class="">البريد الإلكتروني : info@naqaba.com.sa</p><p id="26079c8c-125e-808e-8e51-ded7ab15f991" class="">الرقم الموحد : 800245003</p><p id="26079c8c-125e-809a-986a-cb17e36585aa" class="">المـوقـع: www.naqaba.com.sa</p><hr id="26079c8c-125e-802d-aebc-cc1c53007b7b"/><ul id="26079c8c-125e-80ab-8d9a-c0c239a31561" class="bulleted-list"><li style="list-style-type:disc">-- صفحة 1 ---</li></ul><p id="26079c8c-125e-8035-b672-c174518f737f" class="">الملكة العَربيَّةُ السَّعوديّةْ</p><p id="26079c8c-125e-8002-a617-cbe55a64906b" class="">04/3101240</p><p id="26079c8c-125e-8069-998e-d683dba80ba3" class="">خدمة</p><p id="26079c8c-125e-809f-9dad-f4efe3cfcc86" class="">ضيوف الرحمن</p><p id="26079c8c-125e-8047-a25b-da780ae3cd3b" class="">النقابة العامة للسيارات</p><p id="26079c8c-125e-80bd-bd46-c605fe75617f" class="">لرقابة العامة للسيارات</p><p id="26079c8c-125e-8086-8f16-e59e6a9de348" class="">التاريخ:</p><p id="26079c8c-125e-804d-ba0f-e02bb9e84fbc" class="">1445/06/29</p><p id="26079c8c-125e-800f-809d-e31474cd3b83" class="">النوع:</p><p id="26079c8c-125e-802a-8b3a-eda5e0c0f7d7" class="">صادر عادي</p><p id="26079c8c-125e-80a6-abfb-d9592cbac89f" class="">شرف .. أمانة .. مسؤولية -</p><p id="26079c8c-125e-805b-a609-e0cded3fae74" class="">المشفوعات: 4</p><p id="26079c8c-125e-8071-be5f-cd6e0979418e" class="">السادة / فرع شركة مبتكرات الاتصالات المحدودة</p><p id="26079c8c-125e-80f0-93bd-db0dc0a3cc0f" class="">المحترمين</p><p id="26079c8c-125e-8019-aed4-d4e4041227d4" class="">السلام عليكم ورحمة الله وبركاته</p><p id="26079c8c-125e-80eb-831d-d8aac425c7b8" class="">إشارة الى عرض السعر رقم (01-05-KSA-MZ-121223) وتاريخ (٢٠٢٣/١٢/١٢م)</p><p id="26079c8c-125e-80e0-9811-e3f880bfc2b2" class="">المقدم منكم عبر منصة فرصة بموقع تسعة أعشار بخصوص مشروع إعادة بناء غرفة</p><p id="26079c8c-125e-80c0-87df-fd5b62bc0ded" class="">العمليات بمركز تقنية المعلومات بالنقابة العامة للسيارات بمبلغ اجمالي [٩٠٥٫٣٥٧/٠٥]</p><p id="26079c8c-125e-8070-a46e-c6dfe2724d38" class="">تسعمائة وخمسة آلاف وثلاثمائة وسبعة وخمسون ريال سعودي وخمسة هللات فقط لا غير،</p><p id="26079c8c-125e-8083-8640-d562cd8868e2" class="">تشمل جميع التكاليف اللازمة للتنفيذ وتشمل كذلك ضريبة القيمة المضافة.</p><p id="26079c8c-125e-8029-bfcc-e288283cdd83" class="">وحيث أن عطاؤكم هو العطاء المطابق للشروط والمواصفات المطلوبة، ولموافقتنا عليه،</p><p id="26079c8c-125e-8043-934e-e66748e669dd" class="">فإننا نعمدكم بتنفيذ المطلوب بعد استلام التعميد حسب الشروط والمواصفات المطلوبة</p><p id="26079c8c-125e-80cc-995f-c6b2ce92a786" class="">والموضحة في كراسة الشروط والمواصفات والعرض المقدم من قبلكم، مع استكمال المستندات</p><p id="26079c8c-125e-800c-9635-deb3db5b6753" class="">الرسمية الخاصة بالشركة سارية المفعول، وتكليف مندوب الشركة لتوقيع العقد مدعومًا</p><p id="26079c8c-125e-80d6-9149-e4a5dfbed660" class="">بخطاب تفويض مصادق عليه من الغرفة التجارية.</p><p id="26079c8c-125e-8012-8d6c-e4f84f6115ec" class="">وتقبلوا خالص تحياتي.</p><p id="26079c8c-125e-80b1-be61-f5ac8df1576e" class="">رئيس عام النقابة العامة للسيارات المكلف</p><p id="26079c8c-125e-80f3-8514-d2bbb25c143a" class="">إدارة الشؤون المالية- قسم العقود والمشتريات</p><p id="26079c8c-125e-8083-bf6a-d9164d3a85ab" class="">أيا الإتصالات / &quot;</p><p id="26079c8c-125e-80f8-b6d2-d7cfcadcc39d" class="">ص/ لسعادة مدير مكتب الرئيس العام</p><p id="26079c8c-125e-80b5-ab07-f076fcd11918" class="">المركز الرئيسي</p><p id="26079c8c-125e-809e-aa1c-d8f154804d19" class="">ص/ لسعادة معماعد الرئيس للشؤون المالية</p><p id="26079c8c-125e-8013-9ec5-db14d7d44b84" class="">.5/ الإدارية ح</p><p id="26079c8c-125e-80ce-9413-e0d4e5d95108" class="">ص /لسعادة مدير إدارة تقنية المعلومات</p><p id="26079c8c-125e-80b0-ad5f-eaecb77ec3fa" class="">ص / السعادة مساعد إداري / تقنية المعلومات</p><p id="26079c8c-125e-806d-aa09-f40af12c5d49" class="">أسامة عبد الوهاب سمكري</p><p id="26079c8c-125e-8030-afed-c3f2b75e5f8a" class="">ص / تسعادة رئيس وحدة العقود والمشتريات</p><p id="26079c8c-125e-808f-99f4-e875d153abaa" class="">ص /لسعادة رئيس الحسابات والميزانية</p><p id="26079c8c-125e-8085-9d14-fe2b3ff4b69f" class="">ص / تسعادة رئيس حسابات الشركات</p><p id="26079c8c-125e-8033-95ea-c29f9f03bec5" class="">ص / تسعادة رئيس قسم الرقابة المالية</p><p id="26079c8c-125e-809a-965d-cf8a78b86ce6" class="">ص / شمعادة اخصائي أول المشتريات والعقود</p><p id="26079c8c-125e-8014-838a-db93baa23984" class="">ص /لسعادة مساعد اخصائي العقود والمشتريات ٢</p><p id="26079c8c-125e-80e1-855c-e4b295bfe414" class="">ص /الصادر الإدارة المالية</p><p id="26079c8c-125e-80cc-9cd1-e69dfc443c00" class="">ص/الاتصالات الإدارية فيد رقم (جديد)حتى ٧</p><p id="26079c8c-125e-80a2-bc07-df79e5e2c8a5" class="">الإجراءات المالية:</p><p id="26079c8c-125e-8028-9e16-e4e2c536d41d" class="">بقد الحاسب الالى</p><p id="26079c8c-125e-8072-80a9-c7436dc57bb5" class="">البريد الإلكتروني : info@naqaba.com.sa</p><p id="26079c8c-125e-80a4-82d1-c3c3b987c45a" class="">الرقم الموحد : 800245003</p><p id="26079c8c-125e-801b-9108-f76a0a5bf137" class="">الموقـع: www.naqaba.com.sa</p><hr id="26079c8c-125e-80f6-9094-c8f3040e874b"/><ul id="26079c8c-125e-80a8-85cf-f11ed96347aa" class="bulleted-list"><li style="list-style-type:disc">-- صفحة 1 ---</li></ul><p id="26079c8c-125e-80b5-83e2-c6606f9fecd6" class="">الملكة العربيَّةُ السَّوْدِيَةُ.</p><p id="26079c8c-125e-80a1-9e02-c933701489a4" class="">04/3101244</p><p id="26079c8c-125e-8061-ad1f-c153a7e331e9" class="">ترددعة الدم</p><p id="26079c8c-125e-80e0-a1fc-cb237984c5af" class="">النقابة العامة للسيارات</p><p id="26079c8c-125e-80c3-856e-f45e56f3929a" class="">التاريخ:</p><p id="26079c8c-125e-80c1-a71b-cdb3cbe33d27" class="">1445/07/02</p><p id="26079c8c-125e-8018-8e26-fc4b19dcd56b" class="">النوع:</p><p id="26079c8c-125e-80c1-8540-eaa671e3294c" class="">صادر عادي</p><p id="26079c8c-125e-8037-a3d5-f3c0252cef5b" class="">المركز الرئيسي : مكة المكرمة - طريق مكة جدة القديم - حي السلامة</p><p id="26079c8c-125e-8095-85f0-f3c420c34095" class="">المشنوعات: صورة 1</p><p id="26079c8c-125e-8042-a06b-ca51dcb25c6d" class="">سنترال: ٥٤٣٥٠٣٥ - ص.ب : ٩٢٦٨ - فاكس: ٥٤٣٣٨١٩</p><p id="26079c8c-125e-80b7-8662-f129fc644d8c" class="">السادة / شركة مستشار الطائف التجارية</p><p id="26079c8c-125e-802b-acad-dad261905af9" class="">المحترمين</p><p id="26079c8c-125e-80fd-876f-d2aa95627bc0" class="">السلام عليكم ورحمة الله وبركاته</p><p id="26079c8c-125e-8047-95d1-c1dccf4741f3" class="">إشارة الى عرض الأسعار المقدم منكم رقم (بدون) وتاريخ ٢٠٢٤/٠١/٠٨م بخصوص تجديد رخصة</p><p id="26079c8c-125e-808a-9edb-c05f27f43d8b" class="">فوتوشوب لمدة سنة ميلادية بمبلغ اجمالي [١٠٫٢٥٨/٠٠] عشرة الاف ومائتان وثمانية وخمسون ريال</p><p id="26079c8c-125e-805f-abf3-d1c897dcd5af" class="">سعودي فقط لا غير، تشمل جميع التكاليف اللازمة للتنفيذ كما تشمل ضريبة القيمة المضافة.</p><p id="26079c8c-125e-8040-8575-dafa3b850347" class="">ولمو افقتنا على العرض المشار إليه، لذا نعمدكم بتنفيذ المطلوب بعد استلام التعميد حسب الشروط</p><p id="26079c8c-125e-80ad-bbab-d7544a493406" class="">والمواصفات المطلوبة والموضحة في عرضكم، مع استكمال المستندات الرسمية الخاصة بالشركة سارية</p><p id="26079c8c-125e-807a-8211-dd50df0137a4" class="">المفعول.</p><p id="26079c8c-125e-80d7-9d5a-e71715aec86c" class="">موتقبلوا خالص تحياتي</p><p id="26079c8c-125e-8076-a138-c4239ce1b96d" class="">رئيس عام النقابة العامة للسيارات / المكلف</p><p id="26079c8c-125e-8027-a2f7-fb11b0cabcae" class="">إدارة الشؤون المالية، قسم العقود والمشتريات</p><p id="26079c8c-125e-80d3-b463-d9fea24b9077" class="">س / السعادة مدير مكتب الرئيس العام</p><p id="26079c8c-125e-80e7-a0a3-c28c74271488" class="">ص /لسعادة مساعد الرئيس للشؤون المالية</p><p id="26079c8c-125e-80d8-9831-e4c659de7404" class="">ص /السعادة مدير إدارة تقنية المعلومات</p><p id="26079c8c-125e-8047-a13e-c8cb49a5990c" class="">ص /السعادة مساعد اداري تقنية المعلومات</p><p id="26079c8c-125e-8095-83e3-df3da961f1d5" class="">الإتصالات/</p><p id="26079c8c-125e-80d9-883e-f282d65b8b78" class="">ص /السعادة رئيس وحدة العقود والمشاريت</p><p id="26079c8c-125e-80ce-bc73-f4555df41b64" class="">أسامة بن عبد الوهاب سمكري</p><p id="26079c8c-125e-80fe-9c20-ea9364b58c52" class="">الإدارية</p><p id="26079c8c-125e-8079-b68d-c90c6da46df0" class="">النقابة العامة لل</p><p id="26079c8c-125e-8080-bc1c-dbc23666e9c9" class="">ص /السعادة رئيس الحسابات والميزانية</p><p id="26079c8c-125e-8067-a1f4-d3ac9ae196eb" class="">ركز الرئيسي</p><p id="26079c8c-125e-803a-ac47-ce200ca3c3cd" class="">أكدمَات العامة</p><p id="26079c8c-125e-8085-a77a-d95138fde43b" class="">ص /الحعادة رئيس حسابات الشركات</p><p id="26079c8c-125e-80a1-abc3-cd60775be641" class="">ص /السعادة رئيس قسم الرقابة المالية</p><p id="26079c8c-125e-8062-9241-c075e6df3ffb" class="">ص /السعادة اخصائي أول المشتريات والحدود</p><p id="26079c8c-125e-80cd-879a-e87613f51231" class="">ص /السعادة مساعد اخصالى العقود والمشتريات ؟</p><p id="26079c8c-125e-80f5-a758-ccf33e78c1df" class="">ص/الصادر الإدارة المالية</p><p id="26079c8c-125e-8077-b256-f095192e7871" class="">مى /الاتصالات الإدارية فيدرهم إجديدة ٧٦</p><p id="26079c8c-125e-80ba-823e-d13a2f6f933c" class="">١٢٠٣</p><p id="26079c8c-125e-8091-9c49-e0c7c80a2857" class="">إدارة الشؤون المالية:</p><p id="26079c8c-125e-8049-a668-db09b233c6c7" class="">من حبساب</p><p id="26079c8c-125e-8040-a956-e6ab11dc1ef8" class="">رقباط</p><p id="26079c8c-125e-80a8-9ae6-f4097beeb4bb" class="">البريد الإلكتروني info@naqaba.com.sa</p><p id="26079c8c-125e-80cc-9715-d860cc7afa45" class="">الموقع : www.naqaba.com.sa</p><hr id="26079c8c-125e-8083-9f33-da63fe58103f"/><ul id="26079c8c-125e-80bb-a558-f7db64f0fa16" class="bulleted-list"><li style="list-style-type:disc">-- صفحة 1 ---</li></ul><p id="26079c8c-125e-8027-8e75-f8865034c42a" class="">الملكة العربيَّةُ السَّعوديَةْ</p><p id="26079c8c-125e-8092-9129-dd87e25a99af" class="">04/3101010</p><p id="26079c8c-125e-8091-9841-cfb9871c9185" class="">النقابة العامة للسيارات</p><p id="26079c8c-125e-80cb-a3d3-d1ee1194576c" class="">التاريخ:</p><p id="26079c8c-125e-80da-ad01-d0c5df43cf42" class="">1445/06/11</p><p id="26079c8c-125e-8017-904e-c3305c95383f" class="">ـنوع:</p><p id="26079c8c-125e-8022-b22e-f877f4b05f27" class="">صادر عادي</p><p id="26079c8c-125e-8064-a577-fddcf2a3cb4d" class="">المركز الرئيسي : مكة المكرمة - طريق مكة جدة القديم - حي السلامة</p><p id="26079c8c-125e-8037-bd56-d5d6eb712bf9" class="">المشفوعات: صور المعاملة</p><p id="26079c8c-125e-80c1-a69e-eb7d2f9aaea5" class="">سنترال: ٥٤٣٥٠٣٥ - ص.ب : ٩٢٦٨ - فاكس : ٥٤٣٣٨١٩</p><p id="26079c8c-125e-80b7-9911-ffbd8af081ba" class="">السادة / شركة الاتصالات المرتبطة التجارية المحدودة</p><p id="26079c8c-125e-8035-8333-ffa5e1de72bf" class="">المحترمين</p><p id="26079c8c-125e-8039-94b8-d09d10048f16" class="">السلام عليكم ورحمة الله وبركاته</p><p id="26079c8c-125e-80ed-ac62-f59bdcd63a57" class="">إشارة الى عرض السعر المقدم منكم رقم (بدون) وتاريخ (بدون) المتضمن تجديد رخص</p><p id="26079c8c-125e-808f-ac8d-e99c4e6c2a54" class="">مايكروسوفت حسب ما جاء في العرض المذكور اعلاه ولمدة سنة للعام المالي ٢٠٢٤ م، وبتكلفة اجمالية قدرها</p><p id="26079c8c-125e-804f-8958-fd37db3a0631" class="">[٢٠٧٫٨٥٤/٩١] مئتان وسبعة ألفاً وثمانمائة وأربعة وخمسون ريال سعودي وواحد وتسعون هللة فقط لا</p><p id="26079c8c-125e-8090-8541-c70d715e2069" class="">غير، تشمل جميع التكاليف اللازمة للتنفيذ وتشمل كذلك ضريبة القيمة المضافة.</p><p id="26079c8c-125e-80bb-8665-c1fdcd6862c5" class="">ولموافقتنا على العرض المشار إليه ... لذا نعمدكم بتأمين المطلوب بعد استلام التعميد حسب</p><p id="26079c8c-125e-80c9-aca3-ec4ecd84863a" class="">الشروط والمواصفات المطلوبة والموضحة في عرضكم، مع استكمال المستندات الرسمية الخاصة بالشركة</p><p id="26079c8c-125e-8079-8dc5-d664bf36660d" class="">سارية المفعول.</p><p id="26079c8c-125e-804c-b1b0-da9c6fb212e9" class="">وتقبلوا خالص تحياتي.</p><p id="26079c8c-125e-804e-8ca2-f9b2140ce44d" class="">رئيس عام النقابة العامة للسيارات / المكلف</p><p id="26079c8c-125e-808a-b55f-d08cc94e7b90" class="">أسامة عبد الوهاب سمكري</p><p id="26079c8c-125e-801a-aac7-ecc4e2946d61" class="">البريد الإلكتروني info@naqaba.com.sa</p><p id="26079c8c-125e-8099-a075-f100ae92726e" class="">الموقع : www.naqaba.com.sa</p><hr id="26079c8c-125e-80d4-a9eb-f34fdf3d3eda"/><ul id="26079c8c-125e-80c1-a6f4-c2139309ac65" class="bulleted-list"><li style="list-style-type:disc">-- صفحة 1 ---</li></ul><p id="26079c8c-125e-8052-8766-f67af3b78112" class="">الملكة العَبَيَّةُ السَّعوديّةْ</p><p id="26079c8c-125e-8028-871b-d9e45e4fcec9" class="">04/3101009</p><p id="26079c8c-125e-80da-81ad-edadbeadc992" class="">.علا المياه</p><p id="26079c8c-125e-8060-9758-fbd8fd2d8281" class="">التاريخ:</p><p id="26079c8c-125e-809c-896e-f9d7de82e94a" class="">النقابة العامة للسيارات</p><p id="26079c8c-125e-80f9-9fbc-ffe7f5439e82" class="">1445/06/11</p><p id="26079c8c-125e-80d8-96be-fa6f99346e89" class="">ــوع:</p><p id="26079c8c-125e-807b-a481-fd67728850d0" class="">صادر عادي</p><p id="26079c8c-125e-80e4-9d51-d7fbb88f941a" class="">المركز الرئيسي : مكة المكرمة - طريق مكة جدة القديم - حي السلامة</p><p id="26079c8c-125e-8040-9062-fe099b03a023" class="">المشفوعات: 1</p><p id="26079c8c-125e-80ba-815b-f43055c4a2cd" class="">سنترال: ٥٤٣٥٠٣٥ - ص.ب: ٩٢٦٨ - فاكس : ٥٤٣٣٨١٩</p><p id="26079c8c-125e-80d6-93d7-d2b4f96c074a" class="">السادة / خدمات الجيل التالي لتقنية المعلومات</p><p id="26079c8c-125e-80f2-8a70-d12fb29b403e" class="">المحترمين</p><p id="26079c8c-125e-800f-9a32-d5a1fe60b9d0" class="">السلام عليكم ورحمة الله وبركاته</p><p id="26079c8c-125e-806f-bfeb-feb794eaffaf" class="">إشارة الى عرض الأسعار المقدم منكم رقم (بدون) وتاريخ ٢٠٢٣/١٢/١٨م بخصوص تجديد شهادة</p><p id="26079c8c-125e-807e-b29d-e90a33d04c7d" class="">الموثوقية SSL، بمبلغ اجمالي [٤٫٣٨٩/٥٥] أربعة آلاف وثلاثمائة وتسعة وثمانون ريال سعودي وخمسة</p><p id="26079c8c-125e-80d0-b047-d8f3ae55046b" class="">وخمسون هللة فقط لا غير، تشمل جميع التكاليف اللازمة للتنفيذ كما تشمل ضريبة القيمة المضافة.</p><p id="26079c8c-125e-8074-af3e-efab67f2d60f" class="">ولموافقتنا على العرض المشار إليه، لذا نعمدكم بتنفيذ المطلوب بعد استلام التعميد حسب</p><p id="26079c8c-125e-80bb-84c6-f224fa877a0e" class="">الشروط والمواصفات المطلوبة والموضحة في عرضكم، مع استكمال المستندات الرسمية الخاصة بالشركة</p><p id="26079c8c-125e-80b5-a09a-e7c87f561fc9" class="">سارية المفعول.</p><p id="26079c8c-125e-8090-943d-c521b2f4902e" class="">وتقبلوا خالص تحياتي</p><p id="26079c8c-125e-80fa-a1ce-daad4db661f5" class="">رئيس عام النقابة العامة للسيارات / المكلف</p><p id="26079c8c-125e-8071-930f-ce24becca31f" class="">إدارة الشؤون المالية، قسم العقود والمشتريات</p><p id="26079c8c-125e-80ae-9467-daaf28970ef6" class="">م/لسعادة مدير مكتب الرئيس العام</p><p id="26079c8c-125e-8073-a59c-eb85664525b6" class="">الإتصالات</p><p id="26079c8c-125e-8050-a767-e50ebd427f3a" class="">ص / ثسعادة مساعد الرئيس للشؤون المالية</p><p id="26079c8c-125e-803a-a407-f22f25c18122" class="">النقابة</p><p id="26079c8c-125e-80d8-90e7-dc18820ea341" class="">ص السعادة مدير إدارة تقنية المعلومات</p><p id="26079c8c-125e-8086-8854-d9827961e026" class="">المركز الرئيسي</p><p id="26079c8c-125e-80ff-93da-da8f8cd939a3" class="">ص السعادة رئيس قسم البنية التحتية والشبكات وامن المعلومات</p><p id="26079c8c-125e-804c-8d9f-ca3176d828ae" class="">إداء</p><p id="26079c8c-125e-80ee-91b9-daf701625958" class="">الإدارية</p><p id="26079c8c-125e-80a0-9982-ebfe8e180866" class="">س / السعادة رئيس وحدة العقود والمشتريات</p><p id="26079c8c-125e-80b2-8b06-deedb787c26c" class="">ـدة الخدمات العامـ</p><p id="26079c8c-125e-806f-9181-e5bb76fd5d7a" class="">ص / تسعادة رئيس الحسابات والميزانية</p><p id="26079c8c-125e-801a-9c83-e03d204a6fd4" class="">أسامة عبد الوهاب سمكري</p><p id="26079c8c-125e-80d1-91bb-f0db593029e9" class="">س / لسعادة رئيس حسابات الشركات</p><p id="26079c8c-125e-80f4-b91f-fc535953302c" class="">ص/ لسعادة رئيس قسم الرقابة المالية</p><p id="26079c8c-125e-80b4-9e9d-e1578cfe44c2" class="">ص/ لسعادة اخصائي المشتريات والعقود</p><p id="26079c8c-125e-80c4-9eea-c6c50533f194" class="">ص/ لسعادة مساعد اخصائي العقود والمشتريات ٢</p><p id="26079c8c-125e-8002-a52d-e4d228a8447e" class="">ص الصادر الإدارة المالية</p><p id="26079c8c-125e-809a-bb42-d4816ef0b09b" class="">ص/ الاتصالات الإدارية قيد رقم (جديد) .</p><p id="26079c8c-125e-80fc-87e7-da820f65a65c" class="">١١٠٢٢٢</p><p id="26079c8c-125e-807b-ab03-d0a615575fd4" class="">إدارة الشؤون المالية:</p><p id="26079c8c-125e-8061-bb4d-c006af6b046d" class="">ارتباط رقم: من ميزانية ٢٠٢٤ م</p><p id="26079c8c-125e-80aa-a1d0-d6ceb1c7d429" class="">البريد الإلكتروني info@naqaba.com.sa</p><p id="26079c8c-125e-808e-96aa-ea2236688d70" class="">الموقع : www.naqaba.com.sa</p><hr id="26079c8c-125e-80cc-a0a8-ffc004d839f7"/></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
